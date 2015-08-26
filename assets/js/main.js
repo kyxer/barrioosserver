@@ -134,22 +134,19 @@ $(document).ready(function(){
                         $('.jq-alert, .jq-success').remove();
                     },
                     function () {
-
-                        //window.location = "/";
                         var html = createSuccessMessaje('Revisa tu email un correo ha sido enviado');
-                        $('#recoverForm .panel-body form').before(html);
-                        $('.jq-success').fadeIn();
-                        $('#recoverForm .panel-body :submit').addClass('disabled');
+                        $('#recoverForm').before(html);
+                        $('#recoverForm').addClass('disabled');
                     },
                     function (response) {
 
                         var html = createErrorMessaje(response.responseJSON.error.message);
-                        $('#recoverForm .panel-body form').before(html);
-                        $('.jq-alert').fadeIn();
-                        $('#recoverForm .panel-body .has-feedback')
+                        $('#recoverForm').before(html);
+
+                        $('#recoverForm')
                             .removeClass('has-success')
                             .addClass('has-error');
-                        $('#recoverForm .panel-body :submit').addClass('disabled');
+                        $('#recoverForm').addClass('disabled');
 
                     });
             }
