@@ -112,7 +112,12 @@
 
 @yield('content')
 
-
+@if(isset($dashboard))
+    @include('frontend.sections.footerDashboardNoAuth')
+@endif
+@if(isset($general))
+    @include('frontend.sections.footerAuth')
+@endif
 
 
 <!-- Scripts -->
