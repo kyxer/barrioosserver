@@ -42,7 +42,15 @@
     <![endif]-->
 </head>
 <body>
-
+@if(isset($dashboard))
+    @include('frontend.sections.headerDashboardNoAuth')
+@endif
+@if(isset($dashboardAuth))
+    @include('frontend.sections.headerDashboardAuth')
+@endif
+@if(isset($auth))
+    @include('frontend.sections.headerAuth')
+@endif
 
 <!--<nav class="navbar navbar-default">
     <div class="container">
