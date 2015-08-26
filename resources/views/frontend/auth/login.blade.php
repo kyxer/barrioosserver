@@ -39,7 +39,7 @@
                     <div class="col-sm-offset-2 col-sm-10 col-xs-12">
                       <div class="checkbox" name="rememberme">
                         <label>
-                          <input type="checkbox"> Recordarme
+                          <input type="checkbox" name="rememberme"> Recordarme
                           <a href="{{ URL::route('recoverView') }}">¿Olvidaste tu Contraseña?</a>
                         </label>
                       </div>
