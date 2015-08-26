@@ -5,7 +5,6 @@
  * Date: 15/07/2015
  * Time: 06:02 PM
  */
-
 namespace App\Helpers;
 
 use Illuminate\Support\Facades\File;
@@ -24,7 +23,7 @@ class MyImage
 
             $file = $path.'/'.str_random(20).'.'.$suffix;
 
-
+            dd($file);
             //die(var_dump($file));
             $fp = @fopen($file, 'x+');
             $i--;
