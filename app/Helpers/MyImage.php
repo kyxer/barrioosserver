@@ -20,8 +20,9 @@ class MyImage
         $i = 50;
         do
         {
+            $new_path = preg_replace('/(\/+)/','/',$path);
 
-            $file = $path.'/'.time().'barrios.'.$suffix;
+            $file = $new_path.'/'.time().'barrios.'.$suffix;
 
             //dd($file);
             //die(var_dump($file));
@@ -29,7 +30,7 @@ class MyImage
             $i--;
         }
         while(!$fp && $i>0);
-        dd($fp);
+
         fclose($fp);
         return $file;
     }
