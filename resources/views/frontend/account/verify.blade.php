@@ -1,7 +1,16 @@
 @extends('frontend.app')
 @section('content')
-<div class="center-form panel">
-    <div class="panel-body" >
+    <div class="container-fluid title">
+    <div class="container">
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+          <h1>Verificacion de cuenta</h1>
+      </div>
+    </div>
+  </div>
+  <section class="wrapper">
+    <div class="container form">
+      <div class="row">
+          <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
         @if($errors->has())
             <div class="alert alert-dismissible alert-danger">
                 <strong>Error!</strong>
@@ -18,6 +27,9 @@
                 <a href="/" class="alert-link">Inicio</a>
             </div>
         @endif
+        </div>
+        </div>
     </div>
-</div>
+  </section>
+
 @stop

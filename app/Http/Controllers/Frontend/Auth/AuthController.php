@@ -162,22 +162,31 @@ class AuthController extends Controller
 
     public function getVerify($verified_code){
 
+        if(Auth::check())
+            $data['dashboardAuth'] = 1;
+        else
+            $data['auth'] = 1;
+
+        $data['general'] = 1;
+
         if(!$verified_code)
         {
-            return view('frontend.account.verify')->withErrors(array('error'=>'Codigo de Verificacion Invalido'));
+            return view('frontend.account.verify',$data)->withErrors(
+                array('error' =>'Codigo de Verificacion Invalido'));
         }
 
         $user = User::where('verified_code', '=', $verified_code)->first();
 
         if (!$user) {
-            return view('frontend.account.verify')->withErrors(array('error'=>'Codigo de Verificacion Invalido'));
+
+            return view('frontend.account.verify', $data)->withErrors(array('error' =>'Codigo de Verificacion Invalido'));
         }
 
         $user->is_verify = 1;
         $user->verified_code = null;
         $user->save();
 
-        return view('frontend.account.verify');
+        return view('frontend.account.verify',$data);
 
     }
 
