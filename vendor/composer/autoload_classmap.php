@@ -15,6 +15,7 @@ return array(
     'CreateBarriosTable' => $baseDir . '/database/migrations/2015_07_14_181711_create_barrios_table.php',
     'CreateBlogTable' => $baseDir . '/database/migrations/2015_08_25_202933_create_blog_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateTableSesion' => $baseDir . '/database/migrations/2015_08_26_010934_create_table_sesion.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
