@@ -29,6 +29,7 @@ class MyImage
             $i--;
         }
         while(!$fp && $i>0);
+        dd($fp);
         fclose($fp);
         return $file;
     }
