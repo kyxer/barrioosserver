@@ -23,7 +23,7 @@ class MyImage
 
             $file = $path.'/'.str_random(20).'.'.$suffix;
 
-            dd($file);
+            //dd($file);
             //die(var_dump($file));
             $fp = @fopen($file, 'x+');
             $i--;
