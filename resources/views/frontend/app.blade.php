@@ -1,13 +1,13 @@
-<?php
-    $encrypter = app('Illuminate\Encryption\Encrypter');
-        $encrypted_token = $encrypter->encrypt(csrf_token());
- ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php
+        $encrypter = app('Illuminate\Encryption\Encrypter');
+        $encrypted_token = $encrypter->encrypt(csrf_token());
+    ?>
     <meta name="csrf-token" content="<?php echo $encrypted_token ?>">
     {!! HTML::favicon('assets/images/favicon.png') !!}
     <title>@yield('title', 'BarrioOS')</title>
