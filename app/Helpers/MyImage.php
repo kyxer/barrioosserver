@@ -20,7 +20,7 @@ class MyImage
         $i = 50;
         do
         {
-            $new_path = preg_replace('/(\/+)/','/',$path);
+            $new_path = preg_replace('/([^:])(\/{2,})/', '$1/', $path);
 
             $file = $new_path.'/'.time().'barrios.'.$suffix;
 
