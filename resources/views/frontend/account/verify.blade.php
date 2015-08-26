@@ -1,6 +1,5 @@
 @extends('frontend.app')
 @section('content')
-
 <div class="center-form panel">
     <div class="panel-body" >
         @if($errors->has())
@@ -21,5 +20,4 @@
         @endif
     </div>
 </div>
-
 @stop

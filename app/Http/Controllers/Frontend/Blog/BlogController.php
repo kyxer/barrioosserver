@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend\Blog;
 
 use Illuminate\Http\Request;

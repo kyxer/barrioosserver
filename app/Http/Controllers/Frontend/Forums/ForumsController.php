@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend\Forums;
 
 use Illuminate\Http\Request;

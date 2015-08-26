@@ -42,15 +42,7 @@
     <![endif]-->
 </head>
 <body>
-@if(isset($dashboard))
-    @include('frontend.sections.headerDashboardNoAuth')
-@endif
-@if(isset($dashboardAuth))
-    @include('frontend.sections.headerDashboardAuth')
-@endif
-@if(isset($auth))
-    @include('frontend.sections.headerAuth')
-@endif
+
 
 <!--<nav class="navbar navbar-default">
     <div class="container">
@@ -112,12 +104,7 @@
 
 @yield('content')
 
-@if(isset($dashboard))
-    @include('frontend.sections.footerDashboardNoAuth')
-@endif
-@if(isset($general))
-    @include('frontend.sections.footerAuth')
-@endif
+
 
 
 <!-- Scripts -->
