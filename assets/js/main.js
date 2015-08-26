@@ -77,7 +77,7 @@ $(document).ready(function(){
                         $('.jq-alert').remove();
                     },
                     function () {
-                        window.location = "/";
+                        //window.location = "/";
                     },
                     function (response) {
 
