@@ -67,7 +67,7 @@ class PasswordController extends Controller
             throw new NotFoundHttpException;
         }
 
-        return view('frontend.forms.reset')->with('token', $token);
+        return view('frontend.auth.reset', ['auth' => 1, 'general' => 1, 'login' => 1, 'token' => $token ]);
     }
 
     /**
