@@ -74,35 +74,29 @@ class AuthController extends Controller
     }
 
     public function postLogin(Request $request){
-        if($request->ajax()) {
+        //if($request->ajax()) {
+
             $data = $request->all();
             if (Auth::attempt(['email' => $data['email'], 'password' => $data['password'], 'is_active' => 1],$request->has('remember'))) {
 
                 //case when search a barrio
                 //Session::forget('barrio_search');
 
-                return response()->json([
-                    'success' => [
-                        'message' => 'Login User'
-                    ]
-                ], 200);
+                return redirect()->route('home');
 
             }
             else{
-                return response()->json([
-                    'error' => [
-                        'message' => 'Unauthorized'
-                    ]
-                ], 401);
+                return redirect()->back()
+                ->withErrors(['unathorized'=>'Email o Contraseña Incorrecto.']);
             }
-        }
+        //}
 
 
-        return response()->json([
+        /*return response()->json([
             'error' => [
                 'message' => 'Bad Request'
             ]
-        ], 400);
+        ], 400);*/
 
     }
 

@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10 col-xs-12">
-          <div class="checkbox" id="ingresa">
+          <div class="checkbox" name="rememberme">
             <label>
               <input type="checkbox"> Recordarme
               <a href="{{ URL::route('recoverView') }}">¿Olvidaste tu Contraseña?</a>

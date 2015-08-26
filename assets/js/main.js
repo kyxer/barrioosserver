@@ -67,9 +67,9 @@ $(document).ready(function(){
         return img;
     }
 
-    $('#loginForm').validator().on('submit', function (e) {
+    /*$('#loginForm').validator().on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
-            console.log($('#modalLogin .panel-body .has-feedback').hasClass('has-error'));
+            //console.log($('#modalLogin .panel-body .has-feedback').hasClass('has-error'));
             if(!$('#loginForm .has-feedback').hasClass('has-error')) {
 
                 doAjax('loginForm',
@@ -93,7 +93,7 @@ $(document).ready(function(){
             }
         }
         e.preventDefault();
-    });
+    });*/
 
     $('#registerForm').validator().on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
