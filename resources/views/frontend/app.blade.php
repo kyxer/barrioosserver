@@ -8,7 +8,7 @@
         $encrypter = app('Illuminate\Encryption\Encrypter');
         $encrypted_token = $encrypter->encrypt(csrf_token());
     ?>
-    <meta name="csrf-token" content="<?php echo $encrypted_token ?>">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! HTML::favicon('assets/images/favicon.png') !!}
     <title>@yield('title', 'BarrioOS')</title>
 
