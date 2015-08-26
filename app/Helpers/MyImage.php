@@ -21,7 +21,7 @@ class MyImage
         do
         {
 
-            $file = $path.'/'.time().'.'.$suffix;
+            $file = $path.'/'.time().'barrios.'.$suffix;
 
             //dd($file);
             //die(var_dump($file));
