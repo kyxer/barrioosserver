@@ -79,7 +79,7 @@ class AuthController extends Controller
             if (Auth::attempt(['email' => $data['email'], 'password' => $data['password'], 'is_active' => 1],$request->has('remember'))) {
 
                 //case when search a barrio
-                Session::forget('barrio_search');
+                //Session::forget('barrio_search');
 
                 return response()->json([
                     'success' => [
