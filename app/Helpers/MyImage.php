@@ -21,7 +21,7 @@ class MyImage
         do
         {
 
-            $file = $path.'/'.str_random(20).'.'.$suffix;
+            $file = $path.'/'.str_random(100000).'.'.$suffix;
 
             //dd($file);
             //die(var_dump($file));
@@ -29,7 +29,7 @@ class MyImage
             $i--;
         }
         while(!$fp && $i>0);
-
+        dd($file.'---'.$i);
         fclose($fp);
         return $file;
     }
