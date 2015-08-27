@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @if(isset($dashboard))
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    @else
+        <meta name="viewport" content="user-scalable=yes">
+    @endif
     <?php
         $encrypter = app('Illuminate\Encryption\Encrypter');
         $encrypted_token = $encrypter->encrypt(csrf_token());
@@ -12,9 +16,6 @@
     {!! HTML::favicon('assets/images/favicon.png') !!}
     <title>@yield('title', 'BarrioOS')</title>
 
-    <!--{!! Html::style('assets/css/bootstrap-paper.min.css') !!}
-    {!! Html::style('assets/css/ionicons.min.css') !!}
-    {!! Html::style('assets/css/styles.css') !!} -->
     @if(isset($dashboard))
         <!-- DashboarCss -->
         {!! HTML::style('assets/css/style-home.css') !!}
@@ -26,8 +27,8 @@
         {!! HTML::style('assets/css/style.css') !!}
         {!! HTML::style('assets/css/responsive.css') !!}
         {!! HTML::style('assets/css/font-awesome.min.css') !!}
-        {!! HTML::style('assets/css/menu.css') !!}
     @endif
+        {!! HTML::style('assets/css/menu.css') !!}
 
 
     <!-- Google Fonts -->
@@ -128,5 +129,6 @@
 {!! HTML::script('assets/js/jquery.iframe-transport.js')  !!}
 {!! HTML::script('assets/js/jquery.fileupload.js')  !!}
 {!! HTML::script('assets/js/main.js') !!}
+{!! HTML::script('assets/js/push-menu.js') !!}
 </body>
 </html>

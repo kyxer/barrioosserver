@@ -3,6 +3,7 @@
         <div class="form-group has-feedback">
             <div class="col-sm-12">
                 <input class="form-control" data-error="El correo de seguir esta forma ejemplo.correo@dominio.com" pattern="^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" id="email" type="email" name="email" placeholder="Correo" required>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 <div class="help-block with-errors"></div>
             </div>
         </div>

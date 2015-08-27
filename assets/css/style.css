@@ -121,7 +121,7 @@ h1 {
 .wrapper-2 {
     min-height: 680px;
     height: 100%;
-    /*margin: 0 auto -250px; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -180px; /* the bottom margin is the negative value of the footer's height */
 }
 .push {
     height: 250px; /* .push must be the same height as .footer */
@@ -664,4 +664,16 @@ input[type="file"]{
   padding:0;
   left:0;
   cursor: pointer;
+}
+
+.has-feedback .with-errors{
+    display: none;
+}
+
+.has-error{
+    margin-bottom: 0px;
+}
+
+.has-error .with-errors{
+    display: block;
 }

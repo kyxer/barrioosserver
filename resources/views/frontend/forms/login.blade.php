@@ -4,6 +4,7 @@
         <label for="email" class="col-sm-2 control-label hidepola">Email</label>
         <div class="col-sm-10">
             <input class="form-control" data-error="El correo de seguir esta forma ejemplo.correo@dominio.com" pattern="^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" type="email" name="email" placeholder="Correo" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div class="help-block with-errors" ></div>
         </div>
     </div>
@@ -11,6 +12,7 @@
         <label for="password" class="col-sm-2 control-label hidepola">Contraseña</label>
         <div class="col-sm-10">
           <input data-minlength-error="Minimo son 6 caracteres" data-minlength="6" maxlength="16" class="form-control" type="password" name="password" placeholder="Contraseña" required>
+          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
           <div class="help-block with-errors"></div>
         </div>
     </div>
