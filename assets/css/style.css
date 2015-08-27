@@ -121,7 +121,7 @@ h1 {
 .wrapper-2 {
     min-height: 680px;
     height: 100%;
-    margin: 0 auto -180px; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
 }
 .push {
     height: 250px; /* .push must be the same height as .footer */
