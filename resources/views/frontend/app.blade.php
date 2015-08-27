@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    @if(isset($auth))
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    @else
+    @if(isset($dashboard))
         <meta name="viewport" content="user-scalable=yes">
+    @else
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     @endif
     <?php
         $encrypter = app('Illuminate\Encryption\Encrypter');
