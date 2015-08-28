@@ -136,7 +136,6 @@ class AuthController extends Controller
         if($barrio) {
             $user['barrio'] = $barrio->name;
         }
-
         return $user;
     }
     /**
